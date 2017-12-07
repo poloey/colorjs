@@ -28,8 +28,20 @@ function mIn () {
   $(this).css('background-color', randomColor())
 }
 function mOut () {
-  $(this).css('background-color', original_color))
+  $(this).css('background-color', original_color);
 }
-$('.bg_random_color').css('background-color', random_color());
-$('.hover_random_color').on('hover', mIn, mOut);
+$('.bg_random_color').each(function () {
+  $(this).css('background-color', randomColor());
+})
+$('.hover_random_color').each(function(index, el) {
+  $(this).on('mouseenter', function () {
+    original_color = $(this).css('background-color');
+    $(this).css('background-color', randomColor())
+  })
+  $(this).on('mouseout', function () {
+    $(this).css('background-color', original_color)
+  })
+});
+
+
 
