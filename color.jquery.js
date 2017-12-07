@@ -28,7 +28,7 @@ function settingUpBackgroundColor () {
     $(this).css('background-color', randomColor());
   })
 }
-$('.hover_random_color').each(function(index, el) {
+$('.hover_random_color').each(function(index) {
   $(this).on('mouseenter', function () {
     original_color = $(this).css('background-color');
     $(this).css('background-color', randomColor())
