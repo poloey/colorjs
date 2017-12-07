@@ -13,7 +13,7 @@ For getting random hover background color give `hover_random_color` to a element
 
 
 
-Take care
+Take care         
 Happy Coloring 
 
 
