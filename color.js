@@ -23,20 +23,25 @@ function backgroundColor (element, color) {
 var bg_random_color = document.querySelectorAll('.bg_random_color');
 var hover_random_color = document.querySelectorAll('.hover_random_color');
 // setting up background color
-function settinUpBackgroundColor() {
+function settingUpBackgroundColor() {
   for (var i = 0; i < bg_random_color.length; i++) {
     backgroundColor(bg_random_color[i]);
   }
-  for (var i = 0; i < hover_random_color.length; i++) {
-    var element = hover_random_color[i];
-    var original_color = randomColor();
-    element.addEventListener('mouseenter', function () {
-      original_color = this.style.backgroundColor;
-      backgroundColor(this);
-    })
-    element.addEventListener('mouseout', function () {
-      this.style.backgroundColor = original_color;
-    })
-  }
 }
-settinUpBackgroundColor();
+for (var i = 0; i < hover_random_color.length; i++) {
+  var element = hover_random_color[i];
+  var original_color = randomColor();
+  element.addEventListener('mouseenter', function () {
+    original_color = this.style.backgroundColor;
+    backgroundColor(this);
+  })
+  element.addEventListener('mouseout', function () {
+    this.style.backgroundColor = original_color;
+  })
+}
+
+settingUpBackgroundColor();
+
+
+
+
