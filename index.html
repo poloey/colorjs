@@ -12,8 +12,15 @@
       font-size: 20px;
       padding: 20px;
     }
-    h2, h1 {
+    h2, h1, p {
       text-align: center;
+    }
+    button {
+      color: white;
+      padding: 20px;
+      border: none;
+      margin: 20px 0;
+      font-size: 20px;
     }
     h1 a {
       color: #444;
@@ -29,6 +36,7 @@
     }
     li a {
       padding: 25px;
+      cursor: pointer;
       color: white;
       display: block;
       transition: all .5s;
@@ -46,6 +54,9 @@
     <h1><a href="http://github.com/poloey/colorjs">Color js - View on github</a></h1>
     <hr>
     <h2>Some fruits for demo</h2>
+    <p>
+      <button class="bg_random_color hover_random_color">Change Color</button>
+    </p>
     <ul>
       <li class="bg_random_color hover_random_color"><a>Apple</a></li>
       <li class="bg_random_color hover_random_color"><a>Apricot</a></li>
@@ -145,5 +156,12 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="color.jquery.js"></script>
+  <script>
+    var button = document.querySelector('button');
+    button.addEventListener('click', function () {
+      settingUpBackgroundColor();
+    });
+
+  </script>
 </body>
 </html>
