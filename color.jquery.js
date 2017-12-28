@@ -29,13 +29,12 @@ function settingUpBackgroundColor () {
   })
 }
 $('.hover_random_color').each(function(index) {
-  $(this).on('mouseenter', function () {
+  $(this).hover(function () {
     original_color = $(this).css('background-color');
     $(this).css('background-color', randomColor())
-  })
-  $(this).on('mouseout', function () {
+  }, function () {
     $(this).css('background-color', original_color)
-  })
+  });
 });
 
 settingUpBackgroundColor();
